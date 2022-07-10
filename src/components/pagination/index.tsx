@@ -6,10 +6,9 @@ import {
   ChevronRightIcon,
   DoubleArrowRightIcon,
 } from "@radix-ui/react-icons";
+import { PaginationProps } from "../../types";
 
 export const Pagination = ({
-  postsPerPage,
-  totalPosts,
   pageNumbers,
   paginateForward,
   paginateFullForward,
@@ -19,7 +18,7 @@ export const Pagination = ({
   indexOfFirstPost,
   indexOfLastPost,
   handlePostsPerPage,
-}) => {
+}: PaginationProps) => {
   const lastPage = pageNumbers[pageNumbers.length - 1];
 
   return (
@@ -57,7 +56,7 @@ export const Pagination = ({
           type="button"
           className="nav__button"
           disabled={currentPage === lastPage}
-          onClick={() => paginateFullForward(pageNumbers)}
+          onClick={(pageNumbers) => paginateFullForward(pageNumbers)}
         >
           <DoubleArrowRightIcon />
         </button>

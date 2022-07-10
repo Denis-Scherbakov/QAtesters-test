@@ -32,3 +32,15 @@ export type Order = {
   };
   created_date: number;
 };
+
+export type PaginationProps = {
+  pageNumbers: number[];
+  paginateForward: (event: React.MouseEvent<HTMLButtonElement>) => void;
+  paginateFullForward: (event: React.MouseEvent<HTMLButtonElement>) => void;
+  paginateBack: (event: React.MouseEvent<HTMLButtonElement>) => void;
+  paginateFullBack: (event: React.MouseEvent<HTMLButtonElement>) => void;
+  currentPage: number;
+  indexOfFirstPost: number;
+  indexOfLastPost: number;
+  handlePostsPerPage: (value: string) => void;
+};

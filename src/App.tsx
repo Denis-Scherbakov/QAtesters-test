@@ -30,7 +30,7 @@ export function App() {
     setCurrentPage((prevNumber) => prevNumber + 1);
   };
 
-  const paginateFullForward = (pageNumbers) => {
+  const paginateFullForward = () => {
     setCurrentPage(pageNumbers[pageNumbers.length - 1]);
   };
 

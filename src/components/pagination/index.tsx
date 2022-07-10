@@ -56,7 +56,7 @@ export const Pagination = ({
           type="button"
           className="nav__button"
           disabled={currentPage === lastPage}
-          onClick={(pageNumbers) => paginateFullForward(pageNumbers)}
+          onClick={paginateFullForward}
         >
           <DoubleArrowRightIcon />
         </button>

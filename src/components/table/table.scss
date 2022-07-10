@@ -1,0 +1,100 @@
+@import "../../variables";
+
+.table {
+  td,
+  th {
+    padding: 14px 12px;
+    font-weight: normal;
+    font-size: $bigger;
+    text-align: left;
+    box-shadow: 0px 2px 0px 0px rgba(34, 60, 80, 0.2);
+
+    &:last-child {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      text-align: center;
+    }
+  }
+
+  th {
+    position: sticky;
+    top: 0;
+    white-space: nowrap;
+    background: white;
+  }
+
+  td {
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    min-width: 50px;
+  }
+
+  tr,
+  thead,
+  tbody {
+    display: contents;
+  }
+
+  tr:hover td {
+    background-color: lightgray;
+  }
+
+  tr:active td {
+    background-color: darkgray;
+  }
+
+  display: grid;
+  grid-template-columns: 1fr 2fr 2fr minmax(100px, 1fr);
+
+  &__header {
+    font-size: $smaller;
+    color: gray;
+  }
+
+  &__row {
+    cursor: pointer;
+  }
+
+  &__span {
+    font-size: $bigger;
+    &--secondary {
+      font-size: 14px;
+      color: gray;
+    }
+  }
+}
+
+.chip {
+  display: flex;
+  justify-content: center;
+  font-size: $smaller;
+  align-items: center;
+  color: white;
+  font-weight: bold;
+  min-height: 30px;
+  min-width: 130px;
+  border-radius: 4px;
+}
+
+.new {
+  background-color: #b94a48;
+}
+
+.started {
+  background-color: #3276b1;
+}
+
+.assigned_to {
+  background-color: #c79121;
+}
+
+.declined {
+  background-color: #252525;
+}
+
+.completed {
+  background-color: darkgreen;
+}
